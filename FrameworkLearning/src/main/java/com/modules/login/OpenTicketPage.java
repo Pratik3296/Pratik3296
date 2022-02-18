@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import java.io.IOException;
 
 import static com.genericUtils.BasePage.elementClick;
+import static com.genericUtils.BasePage.enterValue;
 import static com.genericUtils.BaseTest.driver;
 import static com.genericUtils.BaseTest.prop;
 
@@ -19,6 +20,8 @@ public class OpenTicketPage {
     private WebElement clickOnOpenTicket;
     @FindBy(xpath = "//p[text()='Report For Bugs or Errors You Encountered ']")
     private WebElement clickOnBugsNErrors;
+    @FindBy(xpath = "//input[@name='subject']")
+    private WebElement enterSubject;
 
 
     public OpenTicketPage(WebDriver driver){
@@ -34,5 +37,9 @@ public class OpenTicketPage {
     public void dropDown(){
         Select select = new Select(driver.findElement(By.xpath("//select[@id='inputPriority']")));
         select.selectByVisibleText(prop.getProperty("Priority"));
+    }
+
+    public void enterSubjectName(String subject) throws IOException {
+        enterValue(enterSubject,subject);
     }
 }

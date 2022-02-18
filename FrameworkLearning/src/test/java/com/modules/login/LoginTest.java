@@ -19,7 +19,7 @@ public class LoginTest extends BaseTest {
         loginPage.setPassword(prop.getProperty("password"));
         logger.log(LogStatus.PASS, "Entered Password is " + prop.getProperty("password"));
        // loginPage.capthcaClick();
-        Thread.sleep(1000);
+        Thread.sleep(10000);
 
         logger.log(LogStatus.PASS, "Cicked on Capthca ");
         loginPage.clickOnSubmit();

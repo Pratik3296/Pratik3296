@@ -5,7 +5,7 @@
         <parameter name="browser" value="Chrome" />
         <classes>
             <class name="com.modules.login.LoginTest"/>
-            <class name="com.modules.login.OpenTicketTest"/>
+            <class name="com.modules.OpenTicket.OpenTicketTest"/>
 
 
 
