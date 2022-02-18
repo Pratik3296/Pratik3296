@@ -1,5 +1,6 @@
 package com.modules.login;
 
+import com.genericUtils.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -7,6 +8,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
 
+import java.io.File;
 import java.io.IOException;
 
 import static com.genericUtils.BasePage.elementClick;
@@ -22,6 +24,12 @@ public class OpenTicketPage {
     private WebElement clickOnBugsNErrors;
     @FindBy(xpath = "//input[@name='subject']")
     private WebElement enterSubject;
+    @FindBy(xpath = "//textarea[@id='inputMessage']")
+    private WebElement enterBody;
+    @FindBy(xpath = "//input[@name='attachments[]']")
+    private WebElement fileUpload;
+    @FindBy(xpath = "//input[@id='openTicketSubmit']")
+    private WebElement clickOnSubmit;
 
 
     public OpenTicketPage(WebDriver driver){
@@ -42,4 +50,15 @@ public class OpenTicketPage {
     public void enterSubjectName(String subject) throws IOException {
         enterValue(enterSubject,subject);
     }
+
+    public void entermMessageBody(String message) throws IOException {
+        enterValue(enterBody,message);
+    }
+
+    public void fileUpload(){
+        System.out.println("File is Uploaded");
+        driver.findElement(By.xpath("//input[@name='attachments[]']")).sendKeys("D:\\Pratik\\DXP\\Pratik3296\\FrameworkLearning\\src\\test\\resources\\upload\\blank.pdf");
+        clickOnSubmit.click();
+    }
+
 }

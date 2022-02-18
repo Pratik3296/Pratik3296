@@ -24,6 +24,14 @@ public class OpenTicketTest extends BaseTest {
         openTicket.dropDown();
         logger.log(LogStatus.PASS, "Entered the Subject name ");
         openTicket.enterSubjectName(prop.getProperty("enterSubject"));
+        logger.log(LogStatus.PASS, "Entered the Error Body Message ");
+        openTicket.entermMessageBody(prop.getProperty("ErrorBodyMessage"));
+        logger.log(LogStatus.PASS, "File Uploaded successfully ");
+        openTicket.fileUpload();
+
+
+
+
 
 
     }
