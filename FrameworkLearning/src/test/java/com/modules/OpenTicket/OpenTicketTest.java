@@ -28,7 +28,10 @@ public class OpenTicketTest extends BaseTest {
         openTicket.entermMessageBody(prop.getProperty("ErrorBodyMessage"));
         logger.log(LogStatus.PASS, "File Uploaded successfully ");
         openTicket.fileUpload();
-
+        logger.log(LogStatus.PASS, "Verifiyng file uploaded message ");
+        openTicket.clickOnContinue();
+        logger.log(LogStatus.PASS, "Navigating back to Home page ");
+        openTicket.setHomePage();
 
 
 
