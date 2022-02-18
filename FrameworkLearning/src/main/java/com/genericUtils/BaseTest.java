@@ -56,10 +56,10 @@ public class BaseTest {
 
         builder=new Actions(driver);
         js = (JavascriptExecutor) driver;
-        extent = new ExtentReports(System.getProperty("user.dir") + "/Execution Status/Extent Reports/"+"OrangeHRM".concat("_"+BasePage.currentDateAndTime())+".html", true);
+        extent = new ExtentReports(System.getProperty("user.dir") + "/Execution Status/Extent Reports/"+"PHP Travels".concat("_"+BasePage.currentDateAndTime())+".html", true);
         extent.addSystemInfo("Executed By ", prop.getProperty("userName"));
         extent.addSystemInfo("Environment", prop.getProperty("url"));
-        extent.loadConfig(new File(System.getProperty("user.dir") + "/Execution Status/Extent Reports/"+"OrangeHRM".concat("_"+BasePage.currentDateAndTime())+ ".html"));
+        extent.loadConfig(new File(System.getProperty("user.dir") + "/Execution Status/Extent Reports/"+"PHP Travels".concat("_"+BasePage.currentDateAndTime())+ ".html"));
         driver.get(prop.getProperty("url"));
         String siteTitle = driver.getTitle();
 
@@ -73,7 +73,7 @@ public class BaseTest {
             System.out.println(name+" test class name");
             File Path = BasePage.captureScreenshot(driver, name + " " + BasePage.currentDateAndTime());
             String screenshotPath = Path.getPath();
-            screenshotPath = screenshotPath.replace(System.getProperty("user.dir")+"/Execution Status/ScreenShots/"+"OrangeHRM"+"/", "");
+            screenshotPath = screenshotPath.replace(System.getProperty("user.dir")+"/Execution Status/ScreenShots/"+"PHP Travels"+"/", "");
             System.out.println(screenshotPath);
             logger.log(LogStatus.FAIL, "" + res.getThrowable());
             logger.log(LogStatus.FAIL, logger.addScreenCapture(screenshotPath));

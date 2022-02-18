@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="OrangeHRM Automation">
-    <test name="OrangeHRM">
+<suite name="PHP Travels">
+    <test name="PHP Travels">
         <parameter name="browser" value="Chrome" />
         <classes>
-<!--            <class name="com.modules.login.LoginTest"/>-->
-            <class name="com.modules.login.ReverseAString"/>
+            <class name="com.modules.login.LoginTest"/>
+<!--            <class name="com.modules.login.ReverseAString"/>-->
 
 
         </classes>
